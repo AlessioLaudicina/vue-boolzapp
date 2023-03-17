@@ -128,7 +128,42 @@ body{
 
 .message-container{
     flex: 12;
+    
+}
+
+.message-content{
     background-image: url(./img/mine.jpg);
+    background-position: center;
+    height: calc(100vh - 120px);
+    padding: 20px 80px;
+    overflow-y: scroll;
+
+}
+
+.chat-message{
+    font-size: 14px;
+    padding: 8px 10px;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.chat-message-send{
+    margin-left: auto;
+    background-color:  #dcf8c6;
+    font-size: 14px;
+    padding: 8px 10px;
+    width: fit-content;
+    border-radius: 8px;
+   
+    margin-bottom: 30px;
+}
+
+.chat-time-messagge{
+    margin-left: 10px;
+    font-size: 10px;
+    color: gray;
 }
 
 .message-header-content{
@@ -143,4 +178,14 @@ body{
 .chat-title{
     display: flex;
     align-items: center;
+}
+
+/* Inizio message footer*/
+.message-footer{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.message-footer input{
+    min-width: 300px;
 }
