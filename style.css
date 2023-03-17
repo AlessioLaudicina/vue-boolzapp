@@ -83,8 +83,26 @@ body{
     width: 100%;
 }
 
+.sidebar-chat::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    left: 80px;
+    border-bottom: 1px solid gray;
+    opacity: 0.2;
+
+}
+
 .chat-info{
     margin-left: 15px;
+    flex: 10;
+}
+
+.chat-info p{
+    font-size: 13px;
+    line-height: 20px;
+    color: gray ;
 }
 .header{
     background-color: #ededed;
@@ -99,6 +117,7 @@ body{
 
 .message-container{
     flex: 12;
+    background-image: url(./img/mine.jpg);
 }
 
 .message-header-content{
