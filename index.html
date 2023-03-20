@@ -10,12 +10,15 @@
 </head>
 <body>
 
-    <!--Inizio Sidebar-->
+    <div id="app">
+
+         <!--Inizio Sidebar-->
     <div class="sidebar">
         <div class="header">
             <div class="avatar">
-                <img src="./img/avatar_1.jpg" alt="">
+                <img src="./img/avatar_1.jpg" alt=""> 
             </div>
+            <span>Il tuo Profilo</span>
             <div class="chat-header-right">
                 <i class="fa-solid fa-circle-notch"></i>
                 <i class="fa-solid fa-message"></i>
@@ -32,53 +35,19 @@
         </div>
         <div class="sidebar-chats">
             <!--Inserimento v-for per ricreare chat-->
-            <div class="sidebar-chat">
+            <div v-for="contact in contacts" class="sidebar-chat">
                 <div class="chat-avatar">
-                    <img src="./img/avatar_3.jpg" alt="">
+                    <img src="contact.avatar" alt="">
                     
 
 
                 </div>
 
-                <div class="chat-info">
-                    <h4>Niccolo Caroli</h4>
+                <div  class="chat-info">
+                    <h4>{{contact.name}}</h4>
                     <p>Ultimo accesso</p>
                 </div>
             </div>
-
-            <div class="sidebar-chat">
-                <div class="chat-avatar">
-                    <img src="./img/avatar_5.jpg" alt="">
-                    
-
-
-                </div>
-
-                <div class="chat-info">
-                    <h4>Niccolo Caroli</h4>
-                    <p>Ultimo accesso 6 ore fa</p>
-                </div>
-            </div>
-
-            <div class="sidebar-chat">
-                <div class="chat-avatar">
-                    <img src="./img/avatar_7.jpg" alt="">
-                    
-
-
-                </div>
-
-                <div class="chat-info">
-                    <h4>Niccolo Caroli</h4>
-                    <p>Ultimo accesso 1 ora fa</p>
-                </div>
-            </div>
-           
-
-            
-
-
-            
 
         </div>
     </div>
@@ -122,9 +91,12 @@
         
     </div>
 
-   
-
-
+    </div>
     
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
