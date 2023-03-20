@@ -174,6 +174,7 @@ const { createApp } = Vue
 
                 setActiveIndex(index){
                     this.activeIndex = index;
+                    return index
                 }
 
             }

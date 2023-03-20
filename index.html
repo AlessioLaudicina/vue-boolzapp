@@ -35,7 +35,7 @@
         </div>
         <div class="sidebar-chats">
             <!--Inserimento v-for per ricreare chat-->
-            <div v-for="(contact, index) in contacts" class="sidebar-chat" @click="setActiveIndex(index)">
+            <div v-for="(contact, index) in contacts" class="sidebar-chat" @click="setActiveIndex()">
                 <div class="chat-avatar" >
                     <img :src="contact.avatar" alt="">
                     
@@ -76,7 +76,7 @@
             </div>
             <div class="message-content">
 
-                <p  v-for="message in contacts[activeIndex].messages" class="chat-message">{{message}}<span class="chat-time-messagge">11:45</span></p>
+                <p  v-for="message in contacts[activeIndex].messages" class="chat-message">{{message.message}}<span class="chat-time-messagge">11:45</span></p>
                 <p class="chat-message-send">Lorem ipsum dolor sit amet. <span class="chat-time-messagge">11:45</span></p>
                 
 
