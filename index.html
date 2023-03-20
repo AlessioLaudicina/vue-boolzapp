@@ -16,7 +16,7 @@
     <div class="sidebar">
         <div class="header">
             <div class="avatar">
-                <img src="./img/avatar_1.jpg" alt=""> 
+                <img src="./img/avatar_io.jpg" alt=""> 
             </div>
             <span>Il tuo Profilo</span>
             <div class="chat-header-right">
@@ -37,7 +37,7 @@
             <!--Inserimento v-for per ricreare chat-->
             <div v-for="contact in contacts" class="sidebar-chat">
                 <div class="chat-avatar">
-                    <img src="contact.avatar" alt="">
+                    <img :src="contact.avatar" alt="">
                     
 
 
