@@ -48,6 +48,29 @@ body{
     flex: 5.17;
 }
 
+
+.notifications {
+    display: flex;
+    align-items: center;
+    background-color: #8edafb;
+    padding: 13px;
+}
+.bell-icon {
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.bell-icon i {
+    line-height: 45px;
+}
+.notifications-message a {
+    color: rgba(114, 114, 114, 0.829);
+    text-decoration: underline;
+}
+
 .sidebar-search{
     display: flex;
     align-items: center;

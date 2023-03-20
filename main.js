@@ -1,3 +1,9 @@
+
+
+
+
+const DateTime = luxon.DateTime;
+
 const { createApp } = Vue
 
   createApp({
@@ -5,6 +11,9 @@ const { createApp } = Vue
       return {
 
         activeIndex: 0,
+        searchContact: '',
+
+        
         contacts: [
             {
             name: 'Michele',
@@ -175,7 +184,20 @@ const { createApp } = Vue
         activeCoversation(index){
             this.activeIndex = index;
             
-        }
+        },
+
+        filterChat() {
+          this.contacts.forEach((element) => {                
+              if (element.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                  element.visible = true;
+              } else {
+                  element.visible = false;
+              }
+          });
+      }
+
+    
+        
 
     }
 
@@ -192,7 +214,7 @@ addMessage(){
             status: 'sent'
           
         };
-        this.messages.push(newMessageAdd)
+        this.messages.message.push(newMessageAdd)
         this.newMessage = ""
         
       }
