@@ -63,6 +63,7 @@ body{
     height: 35px;
     border-radius: 20px;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .sidebar-search-container input{
@@ -107,7 +108,7 @@ body{
 }
 
 .sidebar-chat:hover{
-   background-color: #c4c1c1;
+   background-color: #e5e1e1;
 }
 
 .chat-info{

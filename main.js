@@ -167,19 +167,19 @@ const { createApp } = Vue
             ],
             }
             ],
-
-
-
-            methods: {
-
-                setActiveIndex(index){
-                    this.activeIndex = index;
-                    
-                }
-
-            }
       }
+      
+    },
+    methods: {
+
+        activeCoversation(index){
+            this.activeIndex = index;
+            
+        }
+
     }
+
+   
   }).mount('#app')
 
 
@@ -187,9 +187,12 @@ const { createApp } = Vue
 
 addMessage(){
         const newMessageAdd = {
+            
+            message: '',
+            status: 'sent'
           
         };
-        this.tasklist.push(newMessageAdd)
+        this.messages.push(newMessageAdd)
         this.newMessage = ""
         
       }
