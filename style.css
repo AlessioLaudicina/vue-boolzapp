@@ -145,7 +145,7 @@ body{
 
 }
 
-.chat-message{
+.sent{
     font-size: 14px;
     padding: 8px 10px;
     width: fit-content;
@@ -154,7 +154,7 @@ body{
     margin-bottom: 30px;
 }
 
-.chat-message-send{
+.received{
     margin-left: auto;
     background-color:  #dcf8c6;
     font-size: 14px;

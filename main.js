@@ -174,7 +174,7 @@ const { createApp } = Vue
 
                 setActiveIndex(index){
                     this.activeIndex = index;
-                    return index
+                    
                 }
 
             }
@@ -187,11 +187,10 @@ const { createApp } = Vue
 
 addMessage(){
         const newMessageAdd = {
-          text: this.newTask,
-          done: false
+          
         };
-        this.tasklist.push(newTaskAdd)
-        this.newTask = ""
+        this.tasklist.push(newMessageAdd)
+        this.newMessage = ""
         
       }
 
