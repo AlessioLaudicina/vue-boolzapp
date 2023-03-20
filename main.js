@@ -3,6 +3,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+
+        activeIndex: 0,
         contacts: [
             {
             name: 'Michele',
@@ -164,9 +166,33 @@ const { createApp } = Vue
             }
             ],
             }
-            ]
+            ],
+
+
+
+            methods: {
+
+                setActiveIndex(index){
+                    this.activeIndex = index;
+                }
+
+            }
       }
     }
   }).mount('#app')
 
 
+/*
+
+addMessage(){
+        const newMessageAdd = {
+          text: this.newTask,
+          done: false
+        };
+        this.tasklist.push(newTaskAdd)
+        this.newTask = ""
+        
+      }
+
+
+*/
