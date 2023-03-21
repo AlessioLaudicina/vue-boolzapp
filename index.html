@@ -38,7 +38,7 @@
         </div>
         <div class="sidebar-search">
             <div class="sidebar-search-container">
-                <input type="text" placeholder="Cerca tra i tuoi contatti" v-model="searchContact"  v-model="searchContact">
+                <input type="text" placeholder="Cerca tra i tuoi contatti" v-model="searchContact" >
                 <i class="fa-solid fa-magnifying-glass"></i>
 
             </div>
@@ -86,14 +86,14 @@
             </div>
             <div class="message-content">
 
-                <p  v-for="message in contacts[activeIndex].messages" :class=message.status>{{message.message}}<span class="chat-time-messagge">11:45</span></p>
+                <p  v-for="message in contacts[activeIndex].messages" :class=message.status>{{message.message}}<span class="chat-time-messagge">{{message.date}}</span></p>
                 
 
             </div>
 
             <div class="message-footer">
                 <i class="fa-solid fa-face-laugh-beam"></i>
-                <input  type="text" placeholder="Scrivi un messaggio">
+                <input  type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage">
                 <i class="fa-solid fa-microphone"></i>
             </div>
             

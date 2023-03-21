@@ -12,8 +12,9 @@ const { createApp } = Vue
 
         activeIndex: 0,
         searchContact: '',
+        newMessage: '',
 
-        
+
         contacts: [
             {
             name: 'Michele',
@@ -184,6 +185,36 @@ const { createApp } = Vue
         activeCoversation(index){
             this.activeIndex = index;
             
+        },
+
+        sendMessage(){
+          this.contacts[this.activeIndex].messages.push(
+            {
+              date: '',
+              message: this.newMessage,
+              status: 'received',
+            }
+          )
+
+          setTimeout(
+            () => {
+
+              this.contacts[this.activeIndex].messages.push(
+                {
+                  date: '',
+                  message: 'ok',
+                  status: 'sent',
+                }
+              )
+              
+            }, 2000
+          );
+
+          this.newMessage = ''
+            
+          
+
+
         },
 
         filterChat() {
