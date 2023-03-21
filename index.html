@@ -44,20 +44,27 @@
             </div>
         </div>
         <div class="sidebar-chats">
+            <template v-for="(contact, index) in contacts">
+
+                <div class="sidebar-chat" @click="activeCoversation(index)" v-if="contact.visible == true">
+                
+                    <div class="chat-avatar" >
+                        <img :src="contact.avatar" alt="">
+                        
+    
+    
+                    </div>
+    
+                    <div  class="chat-info">
+                        <h4>{{contact.name}}</h4>
+                        <p>Ultimo accesso {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}} </p>
+                    </div>
+                </div>
+
+
+            </template>
             <!--Inserimento v-for per ricreare chat-->
-            <div v-for="(contact, index) in contacts" class="sidebar-chat" @click="activeCoversation(index)" >
-                <div class="chat-avatar" >
-                    <img :src="contact.avatar" alt="">
-                    
-
-
-                </div>
-
-                <div  class="chat-info">
-                    <h4>{{contact.name}}</h4>
-                    <p>Ultimo accesso {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}} </p>
-                </div>
-            </div>
+            
 
         </div>
     </div>
