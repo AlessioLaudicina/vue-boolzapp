@@ -2,7 +2,7 @@
 
 
 
-const DateTime = luxon.DateTime;
+
 
 const { createApp } = Vue
 
@@ -211,7 +211,7 @@ const { createApp } = Vue
         sendMessage(){
           this.contacts[this.activeIndex].messages.push(
             {
-              date: this.DateTime,
+              hour: '16:30',
               message: this.newMessage,
               status: 'received',
             }
@@ -222,7 +222,7 @@ const { createApp } = Vue
 
               this.contacts[this.activeIndex].messages.push(
                 {
-                  date: '',
+                  hour: '16:33',
                   message: 'ok',
                   status: 'sent',
                 }
