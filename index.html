@@ -18,7 +18,7 @@
             <div class="avatar">
                 <img src="./img/avatar_io.jpg" alt=""> 
             </div>
-            <span>Il tuo Profilo</span>
+            <span style="font-size: 15px; font-weight:bolder;">Alessio Laudicina</span>
             <div class="chat-header-right">
                 <i class="fa-solid fa-circle-notch"></i>
                 <i class="fa-solid fa-message"></i>
@@ -38,14 +38,14 @@
         </div>
         <div class="sidebar-search">
             <div class="sidebar-search-container">
-                <input type="text" placeholder="Cerca tra i tuoi contatti" v-model="searchContact" >
+                <input type="text" placeholder="Cerca tra i tuoi contatti" v-model="searchContact" @keyup="filterChat" >
                 <i class="fa-solid fa-magnifying-glass"></i>
 
             </div>
         </div>
         <div class="sidebar-chats">
             <!--Inserimento v-for per ricreare chat-->
-            <div v-for="(contact, index) in contacts" class="sidebar-chat" @click="activeCoversation(index)">
+            <div v-for="(contact, index) in contacts" class="sidebar-chat" @click="activeCoversation(index)" >
                 <div class="chat-avatar" >
                     <img :src="contact.avatar" alt="">
                     
@@ -55,7 +55,7 @@
 
                 <div  class="chat-info">
                     <h4>{{contact.name}}</h4>
-                    <p>Ultimo accesso</p>
+                    <p>Ultimo accesso {{ contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}} </p>
                 </div>
             </div>
 
@@ -86,7 +86,16 @@
             </div>
             <div class="message-content">
 
-                <p  v-for="message in contacts[activeIndex].messages" :class=message.status>{{message.message}}<span class="chat-time-messagge">{{message.date}}</span></p>
+                <div  v-for="message in contacts[activeIndex].messages">
+                    <div :class=message.status>
+
+                        <span>{{message.message}}</span> 
+                    
+                        <span class="chat-time-messagge">{{message.hour}}</span> 
+
+                    </div>
+                    
+                </div>
                 
 
             </div>
